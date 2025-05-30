@@ -2,39 +2,22 @@
 
 using namespace std;
 
+
+
 int main()
 {
-    int age[5];
-    float total = 0;
-    float NN = 0;
+	int age[5];
+	float total = 0;
+	float NN = 0;
+	cout << "숫자 5개를 입력해주세요" << endl;
+	for (int i = 0; i < 5; i++){
+		cin >> age[i];
+		total += age[i];
+	}
+	
+	NN = total/5;
 
-    cout << "숫자 5개를 입력해주세요" << endl;
-    for (int i = 0; i < 5; i++){
-        cin >> age[i];
-        total += age[i];
-    }
-
-    NN = total / 5;
-
-    // 버블 정렬 알고리즘 (오름차순 정렬)
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4 - i; j++) {
-            if (age[j] > age[j + 1]) {
-                int temp = age[j];
-                age[j] = age[j + 1];
-                age[j + 1] = temp;
-            }
-        }
-    }
-
-    cout << "합계: " << total << endl;
-    cout << "평균: " << NN << endl;
-
-    cout << "정렬된 숫자 (오름차순): ";
-    for (int i = 0; i < 5; i++) {
-        cout << age[i] << " ";
-    }
-    cout << endl;
-
-    return 0;
+	cout << total << endl;
+	cout << NN << endl;
+	return 0;	
 }
